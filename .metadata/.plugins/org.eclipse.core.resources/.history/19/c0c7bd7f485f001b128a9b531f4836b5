@@ -1,0 +1,38 @@
+package br.senai.sp.jandira;
+
+import br.senai.sp.jandira.model.Conta;
+
+public class App {
+
+	public static void main(String[] args) {
+
+		
+		Conta contaAnaGomes = new Conta();
+		Conta contaDoJoao = new Conta();
+		// *** Conta da Ana:
+		contaAnaGomes.setTitular("Ana Gomes");
+		System.out.println(contaAnaGomes.getTitular());
+		contaAnaGomes.setNumero("111-98");
+		System.out.println(contaAnaGomes.getNumero());
+		contaAnaGomes.setTipo("Poupança");
+		contaAnaGomes.isAtiva(true);
+		contaAnaGomes.setChequeEspecial(200);
+		System.out.println("Seu cheque especial tem a quantia de: " +contaAnaGomes.getChequeEspecial());
+		contaAnaGomes.depositar(100);S
+		contaAnaGomes.mostrarSaldoDaConta(); 
+		
+		
+		double saldoDaConta = contaAnaGomes.getSaldo();
+		System.out.println("*****O saldo da conta é: " + saldoDaConta);
+		// *** Conta do João:
+		//contaDoJoao.titular = "João Ribeiro de Almeida";
+		//contaDoJoao.setTipo("Corrente");
+		//contaDoJoao.numero = "111-99";
+		
+		
+		
+		
+		
+	}
+		
+}

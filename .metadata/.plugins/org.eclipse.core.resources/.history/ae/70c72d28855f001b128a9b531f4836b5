@@ -1,0 +1,24 @@
+ package br.senai.sp.jandira;
+
+import br.senai.sp.jandira.model.Cliente;
+import br.senai.sp.jandira.model.Conta;
+
+public class App2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Cliente pedro = new Cliente();
+		pedro.setNome("Pedro Alvares Cabral");
+		pedro.setCpf("4657838294");
+		pedro.setTelefone("46191143");
+		pedro.setCep("666-98723");
+		
+		//Criar a conta do Pedro
+		Conta contaPedro = new Conta();
+		contaPedro.setTitular(pedro);
+		contaPedro.depositar(100);
+		contaPedro.setNumero("7788-9");
+		System.out.println(contaPedro.getTitular().getTelefone());
+	}
+
+}

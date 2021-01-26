@@ -1,46 +1,37 @@
 package br.senai.sp.jandira;
 
+import br.senai.sp.jandira.model.Cliente;
 import br.senai.sp.jandira.model.Conta;
 
 public class App {
 
 	public static void main(String[] args) {
-
-		
-		Conta contaDaAna = new Conta();
+		Conta contaAnaGomes = new Conta();
 		Conta contaDoJoao = new Conta();
 		// *** Conta da Ana:
-		contaDaAna.titular = "Ana Gomes";
-		contaDaAna.numero = "111-98";
-		contaDaAna.setTipo("Corrente");
-		contaDaAna.ativa = true;
-		contaDaAna.chequeEspecial = 200;
-		contaDaAna.depositar(100);
-		contaDaAna.mostrarSaldoDaConta();
-		contaDaAna.depositar(30);
-		contaDaAna.mostrarSaldoDaConta();
-		contaDaAna.sacar(50);
-		contaDaAna.mostrarSaldoDaConta();
-		contaDaAna.sacar(500);
-		contaDaAna.mostrarSaldoDaConta();
-		contaDaAna.sacar(50);
-		contaDaAna.mostrarSaldoDaConta();
-		contaDaAna.sacar(80);
-		contaDaAna.mostrarSaldoDaConta();
-		contaDaAna.depositar(100);
-		contaDaAna.mostrarSaldoDaConta();
-		contaDaAna.getSaldo();
+	    //contaAnaGomes.setTitular("Ana Gomes");
+		System.out.println("Nome do(a) usuário(a): " + contaAnaGomes.getTitular());
+		contaAnaGomes.setTipo("Poupança");
+		System.out.println("Conta: " + contaAnaGomes.getTipo());
+		contaAnaGomes.setNumero("Número da conta: 111-98");
+		System.out.println(contaAnaGomes.getNumero());
+		contaAnaGomes.setAtiva(true);
+		contaAnaGomes.setChequeEspecial(200);
+		System.out.println("Seu cheque especial tem a quantia de: " +contaAnaGomes.getChequeEspecial());
+		contaAnaGomes.depositar(100);
+		contaAnaGomes.mostrarSaldoDaConta(); 
 		
-		double saldoDaConta = contaDaAna.getSaldo();
+		
+		double saldoDaConta = contaAnaGomes.getSaldo();
 		System.out.println("*****O saldo da conta é: " + saldoDaConta);
 		// *** Conta do João:
-		contaDoJoao.titular = "João Ribeiro de Almeida";
-		contaDoJoao.setTipo("Corrente");
-		contaDoJoao.numero = "111-99";
+		//contaDoJoao.titular = "João Ribeiro de Almeida";
+		//contaDoJoao.setTipo("Corrente");
+		//contaDoJoao.numero = "111-99";
 		
 		
 		
-		
+	Cliente cliente = new Cliente();
 		
 	}
 		

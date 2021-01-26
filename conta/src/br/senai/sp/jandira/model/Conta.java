@@ -2,16 +2,24 @@ package br.senai.sp.jandira.model;
 
 public class Conta {
 	
-	public String tipo;
+	private String tipo;
 	private double saldo;
-	public String numero;
-	public String titular;
-	public boolean ativa;
-	public double chequeEspecial;
+	private String numero;
+	private Cliente titular; //este titular agora é um objeto, não um atributo
+	private boolean ativa;
+	private double chequeEspecial;
 	
 	
 	//**** Métodos de acesso aos atributos da Classe
 	//**** getters and setters
+	
+	public void setTitular(Cliente titular) {
+		this.titular = titular;
+	}
+	
+	public Cliente getTitular() {
+		return this.titular;
+	}
 	
 	public void setTipo(String tipo) {
 		if(tipo.equals("Corrente") || tipo.equals("Poupança")) {
@@ -21,14 +29,40 @@ public class Conta {
 		}
 	}
 	
+	public String getTipo() {
+		return this.tipo;
+	}
+	
+	public void setNumero(String numero) {
+		this.numero = numero;
+	}
+	
+	public String getNumero() {
+		return this.numero;
+	}
+	
+	public void setAtiva(boolean ativa) {
+		this.ativa = ativa;
+	}
+	
+	public boolean isAtiva() {
+		return this.ativa;
+	}
+	
+	public void setChequeEspecial(double chequeEspecial) {
+		this.chequeEspecial = chequeEspecial;
+	}
+	
+	public double getChequeEspecial() {
+		return this.chequeEspecial;
+	}
+	
 	public void depositar(double valorDeposito) {
-		
 		if (valorDeposito < 0) {
 			System.out.println("Valor inválido!!!");
 		} else {
 			saldo += valorDeposito;
 		}
-		
 	}
 	
 	public void mostrarSaldoDaConta() {
@@ -37,7 +71,7 @@ public class Conta {
 	}
 	
 	public double getSaldo(){
-		return saldo;
+		return this.saldo;
 	}
 	
 	public void sacar(double valorDoSaque) {
